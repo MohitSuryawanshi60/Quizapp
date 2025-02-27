@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: ["https://quiz-frontend-rose.vercel.app"], 
+    origin: ["https://quizapp-frontend-mu.vercel.app"], 
     methods: ["GET", "POST"],
     credentials: true
 }));

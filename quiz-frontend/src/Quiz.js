@@ -10,7 +10,7 @@ const Quiz = () => {
 
     useEffect(() => {
         const fetchQuizzes = async () => {
-            const response = await axios.get('http://localhost:5000/api/quizzes');
+            const response = await axios.get('https://quizapp-server-rosy.vercel.app/api/quizzes');
             setQuizzes(response.data);
         };
         fetchQuizzes();
@@ -42,7 +42,7 @@ const Quiz = () => {
             correct: quiz.answer
         }));
 
-        const response = await axios.post('http://localhost:5000/api/submit', { answers: formattedAnswers });
+        const response = await axios.post('https://quizapp-server-rosy.vercel.app/api/submit', { answers: formattedAnswers });
         setScore(response.data.score);
     };
 
