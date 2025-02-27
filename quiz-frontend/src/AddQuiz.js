@@ -18,8 +18,8 @@ const AddQuiz = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const quizData = { question, options, answer };
-        await axios.post('http://localhost:5000/api/quizzes', quizData);
-        navigate('/quizzes');
+        await axios.post('https://quizapp-server-rosy.vercel.app/api/quizzes', quizData);
+        navigate('https://quizapp-server-rosy.vercel.app/quizzes');
     };
 
     return (
